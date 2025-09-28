@@ -1,8 +1,9 @@
 .footer {
-  background: var(--gradient-secondary);
-  color: white;
+  background: var(--bg-primary);
+  color: var(--text-primary);
   position: relative;
   overflow: hidden;
+  border-top: 1px solid var(--border-dark);
 }
 
 .footer::before {

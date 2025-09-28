@@ -1,8 +1,8 @@
 .events-section {
-  background: var(--bg-section);
+  background: var(--bg-primary);
 }
 
-/* Events Tabs */
+/* Events Tabs - Stripe Style */
 .events-tabs {
   display: flex;
   justify-content: center;
@@ -14,15 +14,15 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 1rem 2rem;
-  background: white;
-  border: 2px solid var(--primary-blue);
-  border-radius: 50px;
-  color: var(--primary-blue);
-  font-size: 1rem;
+  padding: 12px 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-dark);
+  border-radius: 8px;
+  color: var(--text-secondary);
+  font-size: 15px;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   position: relative;
   overflow: hidden;
 }
@@ -47,8 +47,9 @@
 .tab-button.active,
 .tab-button:hover {
   color: white;
-  transform: translateY(-2px);
+  transform: translateY(-1px);
   box-shadow: var(--shadow-medium);
+  border-color: var(--accent-blue);
 }
 
 .tab-icon,
@@ -81,19 +82,21 @@
   margin-bottom: 4rem;
 }
 
-/* Event Card */
+/* Event Card - Stripe Style */
 .event-card {
-  background: white;
-  border-radius: 20px;
+  background: var(--gradient-card);
+  border-radius: 16px;
   overflow: hidden;
-  border: 1px solid rgba(0, 102, 204, 0.1);
+  border: 1px solid var(--border-dark);
   transition: all 0.3s ease;
   position: relative;
+  box-shadow: var(--shadow-small);
 }
 
 .event-card:hover {
-  transform: translateY(-10px);
-  box-shadow: var(--shadow-heavy);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-large);
+  border-color: rgba(99, 91, 255, 0.3);
 }
 
 /* Category Badge */

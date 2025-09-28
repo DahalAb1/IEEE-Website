@@ -1,5 +1,5 @@
 .about-section {
-  background: var(--bg-light);
+  background: var(--bg-secondary);
   position: relative;
   overflow: hidden;
 }
@@ -11,7 +11,7 @@
   left: 0;
   right: 0;
   height: 100px;
-  background: linear-gradient(to bottom, var(--bg-section), transparent);
+  background: linear-gradient(to bottom, var(--bg-primary), transparent);
   pointer-events: none;
 }
 
@@ -23,10 +23,11 @@
 
 .section-title {
   font-size: 3rem;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 1rem;
   position: relative;
+  letter-spacing: -0.025em;
 }
 
 .section-title::after {
@@ -36,7 +37,7 @@
   left: 50%;
   transform: translateX(-50%);
   width: 60px;
-  height: 4px;
+  height: 3px;
   background: var(--gradient-primary);
   border-radius: 2px;
 }
@@ -47,6 +48,7 @@
   max-width: 600px;
   margin: 0 auto;
   line-height: 1.6;
+  letter-spacing: -0.01em;
 }
 
 /* Main About Content */
@@ -60,19 +62,20 @@
 
 .about-text h3 {
   font-size: 2rem;
-  color: var(--primary-blue);
+  color: var(--accent-blue);
   margin-bottom: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
 .about-text p {
   font-size: 1.1rem;
-  line-height: 1.8;
+  line-height: 1.7;
   margin-bottom: 1.5rem;
   color: var(--text-secondary);
 }
 
-/* IEEE Stats */
+/* IEEE Stats - Stripe Style Cards */
 .ieee-stats {
   display: flex;
   flex-direction: column;
@@ -80,17 +83,19 @@
 }
 
 .stat-card {
-  background: var(--gradient-light);
+  background: var(--gradient-card);
   padding: 2rem;
-  border-radius: 15px;
+  border-radius: 12px;
   text-align: center;
-  border: 1px solid rgba(0, 102, 204, 0.1);
+  border: 1px solid var(--border-dark);
   transition: all 0.3s ease;
+  box-shadow: var(--shadow-small);
 }
 
 .stat-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
   box-shadow: var(--shadow-medium);
+  border-color: rgba(99, 91, 255, 0.3);
 }
 
 .stat-icon {
@@ -133,14 +138,15 @@
 }
 
 .activity-card {
-  background: white;
+  background: var(--gradient-card);
   padding: 2rem;
-  border-radius: 20px;
+  border-radius: 16px;
   text-align: center;
-  border: 1px solid rgba(0, 102, 204, 0.1);
+  border: 1px solid var(--border-dark);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+  box-shadow: var(--shadow-small);
 }
 
 .activity-card::before {
@@ -149,7 +155,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
+  height: 3px;
   background: var(--gradient-primary);
   transform: scaleX(0);
   transition: transform 0.3s ease;
@@ -160,27 +166,28 @@
 }
 
 .activity-card:hover {
-  transform: translateY(-10px);
-  box-shadow: var(--shadow-heavy);
-  border-color: var(--primary-blue);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-large);
+  border-color: rgba(99, 91, 255, 0.3);
 }
 
 .card-icon {
-  width: 80px;
-  height: 80px;
-  background: var(--gradient-light);
-  border-radius: 50%;
+  width: 72px;
+  height: 72px;
+  background: var(--bg-secondary);
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 1.5rem;
-  border: 3px solid var(--primary-blue);
+  border: 1px solid var(--border-dark);
   transition: all 0.3s ease;
 }
 
 .activity-card:hover .card-icon {
   background: var(--gradient-primary);
-  transform: scale(1.1);
+  transform: scale(1.05);
+  border-color: var(--accent-blue);
 }
 
 .card-icon .icon {
@@ -215,13 +222,14 @@
 
 .mission-card,
 .vision-card {
-  background: white;
+  background: var(--gradient-card);
   padding: 3rem;
-  border-radius: 25px;
-  border: 1px solid rgba(0, 102, 204, 0.1);
+  border-radius: 16px;
+  border: 1px solid var(--border-dark);
   position: relative;
   transition: all 0.3s ease;
   overflow: hidden;
+  box-shadow: var(--shadow-small);
 }
 
 .mission-card::before,
@@ -232,22 +240,23 @@
   left: -50%;
   width: 200%;
   height: 200%;
-  background: var(--gradient-light);
-  opacity: 0.1;
+  background: radial-gradient(circle, rgba(99, 91, 255, 0.05) 0%, transparent 50%);
+  opacity: 0.5;
   transform: rotate(45deg);
   transition: all 0.3s ease;
 }
 
 .mission-card:hover::before,
 .vision-card:hover::before {
-  opacity: 0.2;
+  opacity: 0.8;
   transform: rotate(45deg) scale(1.1);
 }
 
 .mission-card:hover,
 .vision-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-heavy);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-medium);
+  border-color: rgba(99, 91, 255, 0.3);
 }
 
 .card-header {
@@ -292,18 +301,32 @@
   z-index: 1;
 }
 
-/* Call to Action */
+/* Call to Action - Stripe Style */
 .about-cta {
   text-align: center;
-  background: var(--gradient-light);
+  background: var(--gradient-card);
   padding: 3rem;
-  border-radius: 25px;
-  border: 1px solid rgba(0, 102, 204, 0.1);
+  border-radius: 16px;
+  border: 1px solid var(--border-dark);
+  box-shadow: var(--shadow-small);
+  position: relative;
+}
+
+.about-cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 1px;
+  background: var(--gradient-primary);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  opacity: 0.3;
 }
 
 .about-cta h3 {
   font-size: 2rem;
-  color: var(--primary-blue);
+  color: var(--text-primary);
   margin-bottom: 1rem;
   font-weight: 700;
 }
