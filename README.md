@@ -1,0 +1,1 @@
+# Section describes how to maintain the website, change images add new images and update events

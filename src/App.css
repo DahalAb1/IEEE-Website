@@ -1,0 +1,79 @@
+/* App Component Styles */
+.App {
+  text-align: left;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Enhanced Animation Classes */
+.animate.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate.slide-in-left {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Scroll Behavior Enhancement */
+html {
+  scroll-padding-top: 80px; /* Account for fixed navigation */
+}
+
+/* Loading Animation */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--gradient-primary);
+}
+
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Focus and Accessibility */
+*:focus {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 2px;
+}
+
+button:focus,
+a:focus {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 4px;
+}
+
+/* Print Styles */
+@media print {
+  .navigation,
+  .scroll-indicator,
+  .floating-shapes,
+  .hero-background {
+    display: none !important;
+  }
+  
+  .hero-section {
+    background: white !important;
+    color: black !important;
+    padding: 2rem 0 !important;
+  }
+  
+  .section {
+    padding: 1rem 0 !important;
+    break-inside: avoid;
+  }
+}

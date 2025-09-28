@@ -1,0 +1,305 @@
+.officers-section {
+  background: var(--bg-light);
+}
+
+/* Officers Grid */
+.officers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+/* Officer Card */
+.officer-card {
+  background: white;
+  border-radius: 25px;
+  padding: 2.5rem;
+  text-align: center;
+  border: 1px solid rgba(0, 102, 204, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.officer-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: var(--gradient-primary);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.officer-card:hover::before {
+  transform: scaleX(1);
+}
+
+.officer-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-heavy);
+}
+
+/* Officer Avatar */
+.officer-avatar {
+  position: relative;
+  margin-bottom: 2rem;
+  display: inline-block;
+}
+
+.avatar-circle {
+  width: 120px;
+  height: 120px;
+  background: var(--gradient-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  box-shadow: var(--shadow-light);
+  transition: all 0.3s ease;
+}
+
+.officer-card:hover .avatar-circle {
+  transform: scale(1.05);
+  box-shadow: var(--shadow-medium);
+}
+
+.avatar-text {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.position-badge {
+  position: absolute;
+  bottom: -5px;
+  right: -5px;
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-light);
+  border: 3px solid var(--accent-blue);
+}
+
+.position-icon {
+  font-size: 1.2rem;
+}
+
+/* Officer Info */
+.officer-info {
+  text-align: center;
+}
+
+.officer-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.officer-position {
+  font-size: 1.1rem;
+  color: var(--primary-blue);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Officer Details */
+.officer-details {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.detail-item {
+  text-align: center;
+}
+
+.detail-label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.25rem;
+}
+
+.detail-value {
+  display: block;
+  font-size: 1rem;
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+/* Officer Bio */
+.officer-bio {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+/* Contact Info */
+.officer-contact {
+  margin-top: auto;
+}
+
+.contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--gradient-light);
+  color: var(--primary-blue);
+  border: 2px solid var(--primary-blue);
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  background: var(--gradient-primary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-light);
+}
+
+.contact-icon {
+  font-size: 1rem;
+}
+
+/* Join Team CTA */
+.join-team-cta {
+  text-align: center;
+  background: var(--gradient-light);
+  padding: 3rem;
+  border-radius: 25px;
+  border: 1px solid rgba(0, 102, 204, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.join-team-cta::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: var(--gradient-primary);
+  border-radius: 25px;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+.join-team-cta h3 {
+  font-size: 2rem;
+  color: var(--primary-blue);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.join-team-cta p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  line-height: 1.7;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+  .officers-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .officers-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .officer-card {
+    padding: 2rem;
+  }
+  
+  .avatar-circle {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .avatar-text {
+    font-size: 2rem;
+  }
+  
+  .position-badge {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .position-icon {
+    font-size: 1rem;
+  }
+  
+  .officer-details {
+    gap: 1rem;
+  }
+  
+  .join-team-cta {
+    padding: 2rem;
+  }
+  
+  .join-team-cta h3 {
+    font-size: 1.75rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cta-buttons .btn {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .officer-details {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+  
+  .detail-label {
+    margin-bottom: 0;
+  }
+}
