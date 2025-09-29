@@ -48,35 +48,5 @@ function App() {
     </div>
   );
 }
-      threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate');
-        }
-      });
-    }, observerOptions);
-
-    // Observe all fade-in elements
-    const fadeElements = document.querySelectorAll('.fade-in');
-    fadeElements.forEach((el) => observer.observe(el));
-
-    return () => observer.disconnect();
-  }, []);
-
-  return (
-    <div className="App">
-      <Navigation />
-      <HeroSection />
-      <AboutSection />
-      <EventsSection />
-      <OfficersSection />
-      <Footer />
-    </div>
-  );
-}
 
 export default App;
