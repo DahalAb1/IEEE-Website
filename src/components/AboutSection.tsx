@@ -2,8 +2,51 @@ import './AboutSection.css';
 
 const AboutSection = () => {
   return (
-    <section id="about" className="about-section section">
-      <div className="container">
+    <>
+      {/* Image Gallery Section */}
+      <section className="gallery-section section">
+        <div className="container">
+          <div className="section-header fade-in">
+            <h2 className="section-title">Our Activities</h2>
+            <p className="section-subtitle">
+              Explore our vibrant community and engaging events
+            </p>
+          </div>
+          <div className="image-gallery">
+            <div className="gallery-item fade-in fade-in-delay-1">
+              <img src="/images/IMG_1356.PNG" alt="IEEE TXST Workshop" className="gallery-image" />
+              <div className="gallery-overlay">
+                <h3>Technical Workshops</h3>
+                <p>Hands-on learning experiences</p>
+              </div>
+            </div>
+            <div className="gallery-item fade-in fade-in-delay-2">
+              <img src="/images/IMG_1357.PNG" alt="IEEE TXST Networking" className="gallery-image" />
+              <div className="gallery-overlay">
+                <h3>Industry Networking</h3>
+                <p>Connect with professionals</p>
+              </div>
+            </div>
+            <div className="gallery-item fade-in fade-in-delay-3">
+              <img src="/images/IMG_1358.PNG" alt="IEEE TXST Innovation" className="gallery-image" />
+              <div className="gallery-overlay">
+                <h3>Innovation Projects</h3>
+                <p>Build the future together</p>
+              </div>
+            </div>
+            <div className="gallery-item fade-in fade-in-delay-4">
+              <img src="/images/IMG_1359.PNG" alt="IEEE TXST Competitions" className="gallery-image" />
+              <div className="gallery-overlay">
+                <h3>Competitions</h3>
+                <p>Test your skills</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section id="about" className="about-section section">
+        <div className="container">
         {/* Section Header */}
         <div className="section-header fade-in">
           <h2 className="section-title">About IEEE TXST</h2>
@@ -158,6 +201,7 @@ const AboutSection = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

@@ -19,6 +19,24 @@
   overflow: hidden;
 }
 
+.hero-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.hero-bg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.1;
+  filter: blur(1px) brightness(1.2);
+  transform: scale(1.05);
+}
+
 .gradient-overlay {
   position: absolute;
   top: 0;

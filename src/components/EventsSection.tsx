@@ -25,7 +25,8 @@ const EventsSection = () => {
       location: "Engineering Building, Room 201",
       description: "Join us for an hands-on workshop covering the fundamentals of AI and machine learning. Learn about neural networks, data preprocessing, and build your first ML model.",
       type: 'upcoming',
-      category: 'workshop'
+      category: 'workshop',
+      image: '/images/IMG_1361.PNG'
     },
     {
       id: 2,
@@ -35,7 +36,8 @@ const EventsSection = () => {
       location: "Student Union Building",
       description: "Network with top tech companies and explore internship and full-time opportunities. Bring your resume and dress professionally!",
       type: 'upcoming',
-      category: 'networking'
+      category: 'networking',
+      image: '/images/IMG_1362.PNG'
     },
     {
       id: 3,
@@ -45,7 +47,8 @@ const EventsSection = () => {
       location: "STEM Center",
       description: "Compete in our annual robotics challenge! Teams will design and build robots to complete various tasks. Prizes for top performers.",
       type: 'upcoming',
-      category: 'competition'
+      category: 'competition',
+      image: '/images/IMG_1359.PNG'
     },
     {
       id: 4,

@@ -10,8 +10,11 @@ const HeroSection = () => {
 
   return (
     <section id="home" className="hero-section">
-      {/* Animated Background */}
+      {/* Enhanced Background with Images */}
       <div className="hero-background">
+        <div className="hero-image-overlay">
+          <img src="/images/IMG_1354.PNG" alt="IEEE TXST Activities" className="hero-bg-image" />
+        </div>
         <div className="gradient-overlay"></div>
         <div className="floating-shapes">
           <div className="shape shape-1"></div>
